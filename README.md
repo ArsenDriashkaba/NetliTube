@@ -1,2 +1,2 @@
 # NetliTube
-Simple Netflix clone for aducational purposes :)
+Simple Netflix clone for educational purposes :)
