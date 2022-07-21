@@ -1,0 +1,9 @@
+.navigation {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+  font-size: 3rem;
+  justify-content: space-between;
+  min-height: 8vh;
+}
