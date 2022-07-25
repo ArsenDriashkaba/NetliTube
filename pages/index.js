@@ -1,5 +1,6 @@
 import Head from "next/head";
 import BannerSlider from "../components/BannerSlider/BannerSlider";
+import Card from "../components/CardList/Card/Card";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -13,6 +14,9 @@ export default function Home() {
 
       <main className={styles.main}>
         <BannerSlider />
+        <Card size="small" />
+        <Card size="medium" />
+        <Card size="large" />
       </main>
     </div>
   );

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { SwiperSlide } from "swiper/react";
 
 import styles from "./Slide.module.css";
 
