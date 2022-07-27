@@ -1,6 +1,6 @@
 import Head from "next/head";
 import BannerSlider from "../components/BannerSlider/BannerSlider";
-import Card from "../components/CardList/Card/Card";
+import CardList from "../components/CardList/CardList";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -14,9 +14,27 @@ export default function Home() {
 
       <main className={styles.main}>
         <BannerSlider />
-        <Card size="small" />
-        <Card size="medium" />
-        <Card size="large" />
+        <CardList
+          listTitle="Test large cards"
+          cards={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+          numberPerRow={6}
+          cardSize="large"
+          autoPlayDelay={7000}
+        />
+        <CardList
+          listTitle="Test small cards"
+          cards={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+          numberPerRow={6}
+          cardSize="small"
+          autoPlayDelay={10000}
+        />
+        <CardList
+          listTitle="Test medium cards"
+          cards={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+          numberPerRow={10}
+          cardSize="medium"
+          autoPlayDelay={15000}
+        />
       </main>
     </div>
   );

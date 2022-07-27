@@ -2,6 +2,28 @@
   --gray: rgb(220, 220, 220);
   --transparentGray: rgba(220, 220, 220, 0.35);
   --transparentDark: rgba(0, 0, 0, 0.35);
+
+  --smallCardWidth: 30rem;
+  --mediumCardWidth: 16rem;
+  --largeCardWidth: 40rem;
+
+  --smallCardHeight: 20rem;
+  --mediumCardHeight: 28rem;
+  --largeCardHeight: 50rem;
+
+  --smallWrapperHeight: calc(var(--smallCardHeight) * 1.22);
+  --mediumWrapperHeight: calc(var(--mediumCardHeight) * 1.22);
+  --largeWrapperHeight: calc(var(--largeCardHeight) * 1.22);
+
+  --smallCardPadding: calc(
+    (var(--smallWrapperHeight) - var(--smallCardHeight)) / 2
+  );
+  --mediumCardPadding: calc(
+    (var(--mediumWrapperHeight) - var(--mediumCardHeight)) / 2
+  );
+  --largeCardPadding: calc(
+    (var(--largeWrapperHeight) - var(--largeCardHeight)) / 2
+  );
 }
 
 * {
@@ -28,6 +50,12 @@ button {
 /*
   Overriding styles for swiper component on home page
 */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .swiper-button-next,
 .swiper-button-prev {
   color: var(--transparentGray);

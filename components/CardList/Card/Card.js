@@ -4,13 +4,13 @@ import classNames from "classnames";
 
 import styles from "./Card.module.css";
 
-const Card = ({ imgSrc, size }) => {
-  const sizeClassMap = {
-    small: styles.smallImg,
-    medium: styles.mediumImg,
-    large: styles.largeImg,
-  };
+const sizeClassMap = {
+  small: styles.smallImg,
+  medium: styles.mediumImg,
+  large: styles.largeImg,
+};
 
+const Card = ({ imgSrc, size }) => {
   return (
     <motion.div
       className={classNames(styles.imageContainer, sizeClassMap[size])}
