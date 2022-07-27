@@ -41,7 +41,7 @@ const CardList = ({
       >
         {cards?.map((card, index) => (
           <SwiperSlide className={styles.card} key={index}>
-            <Card size={cardSize} />
+            <Card size={cardSize} cardInfo={card} />
           </SwiperSlide>
         ))}
       </Swiper>

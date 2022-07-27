@@ -1,9 +1,18 @@
 import Head from "next/head";
 import BannerSlider from "../components/BannerSlider/BannerSlider";
 import CardList from "../components/CardList/CardList";
+
+import { getVideosData } from "../lib/videos";
+
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
+export const getServerSideProps = async () => {
+  const videosData = await getVideosData("eldenRing", 10);
+
+  return { props: { videosData } };
+};
+
+export default function Home({ videosData }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -16,7 +25,7 @@ export default function Home() {
         <BannerSlider />
         <CardList
           listTitle="Test large cards"
-          cards={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+          cards={videosData}
           numberPerRow={6}
           cardSize="large"
           autoPlayDelay={7000}

@@ -10,7 +10,9 @@ const sizeClassMap = {
   large: styles.largeImg,
 };
 
-const Card = ({ imgSrc, size }) => {
+const Card = ({ cardInfo, size }) => {
+  const imgUrl = cardInfo?.thumbnail?.url;
+
   return (
     <motion.div
       className={classNames(styles.imageContainer, sizeClassMap[size])}
@@ -18,7 +20,7 @@ const Card = ({ imgSrc, size }) => {
     >
       <Image
         className={styles.image}
-        src={imgSrc || "/static/images/banner.jpeg"}
+        src={imgUrl || "/static/images/banner.jpeg"}
         alt="image"
         layout="fill"
       />
